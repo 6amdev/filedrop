@@ -75,7 +75,7 @@ class ServerConnection {
       console.error(chalk.red(`❌ Failed to create download path for ${this.name}:`));
       console.error(chalk.red(`   Error: ${error.message}`));
       console.error(chalk.red(`   Path: ${this.downloadPath || 'undefined'}`));
-      throw error;
+      throw error; 
     }
   }
 
