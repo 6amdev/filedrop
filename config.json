@@ -1,0 +1,52 @@
+{
+  "server": {
+    "port": 3000,
+    "uploadPath": "./uploads"
+  },
+  "auth": {
+    "enabled": true,
+    "username": "admin",
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "apiKey": "filedrop-secure-key-2024"
+  },
+  "client": {
+    "downloadPath": "G:/filedrop2/downloads",
+    "servers": [
+      {
+        "name": "Production Server",
+        "url": "http://167.71.207.214:3000",
+        "apiKey": "filedrop-secure-key-2024",
+        "downloadPath": null,
+        "pollInterval": 30000,
+        "maxRetries": 3,
+        "priority": 1,
+        "enabled": true
+      },
+      {
+        "name": "Development Server",
+        "url": "http://192.168.1.100:3000",
+        "apiKey": "filedrop-secure-key-2024",
+        "downloadPath": null,
+        "pollInterval": 60000,
+        "maxRetries": 2,
+        "priority": 2,
+        "enabled": false
+      },
+      {
+        "name": "Testing Server",
+        "url": "http://localhost:3000",
+        "apiKey": "filedrop-secure-key-2024",
+        "downloadPath": null,
+        "pollInterval": 45000,
+        "maxRetries": 2,
+        "priority": 3,
+        "enabled": false
+      }
+    ]
+  },
+  "cleanup": {
+    "deleteAfterDownload": true,
+    "keepFilesForDays": 3,
+    "autoCleanupInterval": 24
+  }
+}
